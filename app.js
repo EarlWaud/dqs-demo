@@ -18,7 +18,13 @@ app.set('views', './src/views');
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-  res.render('index', { list: ['a', 'b'], title: 'My DQS Guide Application' });
+  res.render(
+    'index',
+    {
+      nav: ['Books', 'Authors'],
+      title: 'My DQS Guide'
+    }
+  );
 });
 
 app.listen(port, () => {
